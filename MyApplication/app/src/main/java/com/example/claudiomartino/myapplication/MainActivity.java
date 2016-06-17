@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
         by findViewByID method
          */
 
-        toolbar = (Toolbar) findViewById(R.id.tool_bar);
-        tabLayout = (TabLayout) findViewById(R.id.tabs);
+        toolbar = (Toolbar) findViewById(R.id.tb);
+        tabLayout = (TabLayout) findViewById(R.id.tablayout);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
 
         /*
