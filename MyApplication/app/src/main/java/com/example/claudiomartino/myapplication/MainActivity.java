@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Declaring All The Variables Needed
 
-    private Toolbar toolbar;
+    //private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private ViewPagerAdapter viewPagerAdapter;
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         by findViewByID method
          */
 
-        toolbar = (Toolbar) findViewById(R.id.tb);
+        //toolbar = (Toolbar) findViewById(R.id.tb);
         tabLayout = (TabLayout) findViewById(R.id.tablayout);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
 
@@ -40,9 +40,10 @@ public class MainActivity extends AppCompatActivity {
         the default action bar thus making the toolbar work like a normal
         action bar.
          */
+
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(viewPagerAdapter);
-        setSupportActionBar(toolbar);
+        //setSupportActionBar(toolbar);
 
         /*
         TabLayout.newTab() method creates a tab view, Now a Tab view is not the view
@@ -87,10 +88,10 @@ public class MainActivity extends AppCompatActivity {
          */
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-
+        tabLayout.setOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(viewPager));
 
     }
-
+/*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -112,4 +113,5 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    */
 }
